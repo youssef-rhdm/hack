@@ -40,7 +40,7 @@ export default function Login() {
             >
               Sign in to your account
             </h1>
-            <form className="space-y-4 md:space-y-6" action="#">
+            <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block mb-2 text-sm font-medium text-gray-900 ">
                   Your email
@@ -49,12 +49,11 @@ export default function Login() {
                   type="email"
                   name="email"
                   value={FormData.email}
-                  required
                   onChange={(e) => {
                     handleInputs(e);
                   }}
                   id="email"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 "
                   placeholder="name@company.com"
                   required
                 />
@@ -73,7 +72,7 @@ export default function Login() {
                   required
                   id="password"
                   placeholder="••••••••"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
+                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 "
                 />
               </div>
               <div className="flex items-center justify-between">
@@ -83,7 +82,7 @@ export default function Login() {
                       id="remember"
                       aria-describedby="remember"
                       type="checkbox"
-                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 "
+                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 "
                       required=""
                     />
                   </div>
@@ -93,14 +92,14 @@ export default function Login() {
                 </div>
                 <a
                   href="#"
-                  className="text-sm font-medium text-primary-600 hover:underline "
+                  className="text-sm font-medium text-blue-600 hover:underline "
                 >
                   Forgot password?
                 </a>
               </div>
               <button
                 type="submit"
-                className="w-full text-black bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+                className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
               >
                 Sign in
               </button>
@@ -108,7 +107,7 @@ export default function Login() {
                 Don’t have an account yet?{" "}
                 <a
                   href="/signup"
-                  className="font-medium text-primary-600 hover:underline "
+                  className="font-medium text-blue-600 hover:underline "
                 >
                   Sign up
                 </a>
